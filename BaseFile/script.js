@@ -25,6 +25,7 @@ const sizes = {
 // Camera
 
 const camera = new THREE.PerstectiveCamera(75, sizes.width/sizes.height);
+camera.position.z = 3
 scene.add(camera);
 
 
@@ -36,3 +37,5 @@ const renderer = new THREE.WebGLRenderer({
 })
 
 renderer.setSize(sizes.width, sizes.height)
+
+renderer.render(scene, camera)
